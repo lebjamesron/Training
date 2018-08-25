@@ -1,0 +1,7 @@
+.signup-section {
+  border-style: solid
+}
+
+mat-form-filed {
+  width: 300px;
+}
