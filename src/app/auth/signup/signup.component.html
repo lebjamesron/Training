@@ -1,5 +1,5 @@
 <section class="signup-section">
-  <form fxLayout="column" fxLayoutAlign="center center" #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
     <mat-form-field>
       <input type="email" matInput placeholder="your email"
              ngModel name="email" email required #inputEmail="ngModel">
@@ -13,11 +13,16 @@
       <mat-error>Invalid password.</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="your birthday" [matDatepicker]="picker">
+      <input 
+        matInput 
+        placeholder="your birthday" 
+        [matDatepicker]="picker"
+        [max]=maxDate ngModel name="birthday" required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <button mat-raised-button color="primary">Submit</button>
+    <mat-checkbox ngModel name="agree" required>Agree to Terms and Conditions</mat-checkbox>
+    <button mat-raised-button color="primary" [disabled]="signupForm.invalid">Submit</button>
   </form>
 </section>
 
