@@ -1,0 +1,12 @@
+<mat-nav-list>
+  <a *ngFor="let listItem of listItems" mat-list-item routerLink="/{{listItem.url}}" (click)="closeSidenav()">
+    <mat-icon class="nav-icon">{{listItem.icon}}</mat-icon>
+    <span>{{listItem.lable}}</span>
+  </a>
+  <mat-list-item>
+    <button mat-icon-button (click)="closeSidenav()">
+      <mat-icon class="nav-icon">eject</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-list-item>
+</mat-nav-list>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  listItems = [
+    { url: 'signup', lable: 'Signup', icon: 'face' },
+    { url: 'login', lable: 'Login', icon: 'input' },
+    { url: 'training', lable: 'Training', icon: 'fitness_center' }
+  ];
 }
