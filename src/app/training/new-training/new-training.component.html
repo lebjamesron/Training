@@ -1,3 +1,21 @@
-<p>
-  new-training works!
-</p>
+<section class="new-training" fxLayout fxLayoutAlign="center">
+  <mat-card fxFlex="400px">
+    <mat-card-title>Time To Start A Workout!</mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-select placeholder="Training">
+              <mat-option>-- None --</mat-option>
+              <mat-optgroup *ngFor="let group of trainingGroups" [label]="group.name"
+                            [disabled]="group.disabled">
+                <mat-option *ngFor="let training of group.training" [value]="training.value">
+                  {{training.viewValue}}
+                </mat-option>
+              </mat-optgroup>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" mat-button (click)="onStartTraining()">Start</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

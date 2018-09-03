@@ -18,6 +18,7 @@ import { PastTrainingComponent } from './training/past-training/past-training.co
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidnavListComponent } from './navigation/sidnav-list/sidnav-list.component';
+import { StopTrainingComponent } from './training/current-training/stop-training/stop-training.component';
 
 
 
@@ -32,7 +33,8 @@ import { SidnavListComponent } from './navigation/sidnav-list/sidnav-list.compon
     PastTrainingComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidnavListComponent
+    SidnavListComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ import { SidnavListComponent } from './navigation/sidnav-list/sidnav-list.compon
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingComponent]
 })
 export class AppModule { }
